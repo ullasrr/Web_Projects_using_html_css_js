@@ -1,0 +1,15 @@
+.centre{
+    text-align: center;
+}
+
+.bgred{
+    background-color: red;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mxauto{
+    margin: auto;
+}
