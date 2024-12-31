@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&family=Sixtyfour&family=Varela+Round&display=swap");
+
+body {
+  background-color: antiquewhite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type:none;
+    height: 45px;
+    background-color: black;
+    color: white;
+    
+}
+
+.brand img {
+    width: 43px;
+    
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
