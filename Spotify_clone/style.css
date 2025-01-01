@@ -25,12 +25,43 @@ nav ul{
     
 }
 
+nav ul li{
+  padding: 0 12px;
+}
 .brand img {
     width: 43px;
+    padding: 0 2px;
     
 }
 
 .brand{
     display: flex;
     align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
 }
+
+.bottom{
+  position: sticky;
+  height: 100px;
+  background-color: black;
+  color: pink;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  min-height: 83vh;
+
+}
+
+#myProgressBar{
+  width: 80vw;
+}
+
+/* .fa{
+  background-color: black;
+  color: white;
+} */
