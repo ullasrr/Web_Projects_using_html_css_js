@@ -54,15 +54,26 @@ nav ul li{
 }
 
 .container{
-  min-height: 83vh;
-
+  min-height: 75vh;
+  background-color: black;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 
+               "Segoe UI", Roboto, Oxygen-Sans, 
+               Ubuntu, Cantarell, "Helvetica Neue", 
+               sans-serif;
 }
 
 #myProgressBar{
   width: 80vw;
 }
 
+.icons{
+  margin-top: 14px ;
 
+}
+.icons i{
+  cursor:pointer;
+}
 /* .fa{
   background-color: black;
   color: white;
