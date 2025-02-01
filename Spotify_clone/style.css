@@ -204,3 +204,192 @@ nav ul li{
     display: none;
   }
 }
+
+
+/* changes */
+
+
+
+
+/* General mobile adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .songItems {
+    width: 100%;
+  }
+
+  .bottom {
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .songInfo {
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+
+  #myProgressBar {
+    width: 90%;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 5px;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .songItems {
+    font-size: 0.8rem;
+  }
+
+  .bottom {
+    height: 70px;
+  }
+
+  .icons i {
+    font-size: 1.5rem;
+  }
+
+  #masterSongName {
+    display: none; /* Hide song name for smaller screens */
+  }
+
+  .songInfo img {
+    width: 40px;
+    height: 15px;
+  }
+}
+
+/* Very small screens (below 400px) */
+@media (max-width: 400px) {
+  .brand {
+    font-size: 0.8rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .icons i {
+    font-size: 1.2rem;
+  }
+
+  .bottom {
+    height: 60px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #myProgressBar {
+    width: 85%;
+  }
+}
+
+
+/* 2nd change */
+
+
+
+/* Ensure the page doesn't move on small screens */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevents unexpected width issues */
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Ensure the container fits properly */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Ensure navbar items don't break */
+nav ul {
+  flex-wrap: nowrap; /* Prevents wrapping */
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Adjust bottom player for mobile */
+.bottom {
+  position: fixed; /* Fixes the bottom bar */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  z-index: 999; /* Keeps it above other elements */
+}
+
+/* Ensure progress bar fits */
+#myProgressBar {
+  width: 90%;
+}
+
+/* Adjust song list for small screens */
+.songItems {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+/* Hide long song names on small screens */
+@media (max-width: 480px) {
+  .songInfo #masterSongName {
+    display: none;
+  }
+
+  .songItems {
+    min-width: 95%;
+  }
+
+  .icons i {
+    font-size: 1.4rem;
+  }
+}
