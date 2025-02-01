@@ -246,3 +246,24 @@ function formatTime(seconds) {
 
 // Call function after DOM is loaded
 document.addEventListener("DOMContentLoaded", loadSongDurations);
+
+
+//change
+
+window.addEventListener('resize', adjustFontSize); // Listen for window resize
+
+function adjustFontSize() {
+    const masterSongName = document.getElementById('masterSongName');
+    if (window.innerWidth <= 600) {
+        // For small screens (phones)
+        masterSongName.style.fontSize = '18px';
+        masterSongName.style.color = '#FFFFFF'; // White color for better visibility
+    } else {
+        // For larger screens (tablets, desktops)
+        masterSongName.style.fontSize = '24px';
+        masterSongName.style.color = '#FF6347'; // Tomato color
+    }
+}
+
+// Call the function on page load to set the initial size
+adjustFontSize();

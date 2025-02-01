@@ -267,3 +267,29 @@ nav ul li{
       display: none; /* Hide the song name on mobile */
   }
 }
+
+/* new */
+
+#masterSongName {
+  font-size: 24px ;
+  color: #FF6347;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* On small screens (phones) */
+@media (max-width: 600px) {
+  #masterSongName {
+      font-size: 18px; /* Smaller text on mobile */
+      color: #FFFFFF;  /* White color for better visibility */
+  }
+}
+
+/* On larger screens (tablets, desktops) */
+@media (min-width: 601px) {
+  #masterSongName {
+      font-size: 24px; /* Larger text for better visibility */
+      color: #FF6347;
+  }
+}
