@@ -206,3 +206,26 @@ audioElement.addEventListener('ended', () => {
     gif.style.opacity = 0;
     audioElement.currentTime = 0;
 });
+
+
+
+//change for duration
+
+
+// songItems.forEach((element, i) => {
+//     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+//     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+    
+//     let audio = new Audio(songs[i].filePath);
+//     audio.addEventListener("loadedmetadata", () => {
+//         let duration = formatTime(audio.duration);
+//         element.getElementsByClassName("songDuration")[0].innerText = duration;
+//     });
+// });
+
+// // Helper function to format time (e.g., 125 sec → 2:05)
+// function formatTime(seconds) {
+//     let min = Math.floor(seconds / 60);
+//     let sec = Math.floor(seconds % 60);
+//     return `${min}:${sec < 10 ? "0" : ""}${sec}`;
+// }
