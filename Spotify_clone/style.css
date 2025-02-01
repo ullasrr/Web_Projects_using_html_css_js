@@ -301,3 +301,14 @@ nav ul li{
   background-color: green;
   color: yellow;
 }
+
+
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+  body {
+      background-color: #000000; /* Change background to black on mobile */
+  }
+}
