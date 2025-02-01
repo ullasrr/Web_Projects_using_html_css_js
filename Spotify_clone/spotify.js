@@ -51,7 +51,7 @@ let songTimes = {}; // Store playback positions for each song
 
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
     element.addEventListener('click', (e) => {
-        let clickedIndex = parseInt(e.target.id);
+        let clickedIndex = parseInt(e.target.id)-1;
 
         // Save the current song's playback time before switching
         if (songIndex !== undefined) {
@@ -77,7 +77,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
 
             e.target.classList.remove('fa-play-circle');
             e.target.classList.add('fa-pause-circle');
-            masterSongName.innerHTML = songs[songIndex - 1].songName;
+            masterSongName.innerHTML = songs[songIndex].songName;
             gif.style.opacity = 1;
             masterPlay.classList.remove('fa-play-circle');
             masterPlay.classList.add('fa-pause-circle');
@@ -106,7 +106,7 @@ document.getElementById('next').addEventListener('click',()=>{
 
 
 document.getElementById('previous').addEventListener('click',()=>{
-    if(songIndex<=0){
+    if(songIndex<0){
         songIndex=0;
     }
     else{
@@ -181,3 +181,28 @@ audioElement.addEventListener('ended', () => {
     masterPlay.classList.add('fa-play-circle');
 });
 
+
+
+// audioElement.addEventListener('ended', () => {
+//     document.getElementById('next').click(); // Simulates clicking "Next"
+// });
+
+
+audioElement.addEventListener('ended', () => {
+    while (songIndex < songs.length - 1) {
+        songIndex++;
+        audioElement.src = songs[songIndex].filePath;
+        masterSongName.innerHTML = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+        return; // Exit loop after playing next song
+    }
+
+    // If last song ends, stop playback
+    masterPlay.classList.remove('fa-pause-circle');
+    masterPlay.classList.add('fa-play-circle');
+    gif.style.opacity = 0;
+    audioElement.currentTime = 0;
+});
