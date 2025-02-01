@@ -71,7 +71,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
             songIndex = clickedIndex;
             let resumeTime = songTimes[songIndex] || 0; // Retrieve saved time if exists
 
-            audioElement.src = `./songs/${songIndex + 1}.mp3`;
+            audioElement.src = `./songs/${songIndex +1}.mp3`;
             audioElement.currentTime = resumeTime; // Resume from saved time
             audioElement.play();
 
@@ -89,7 +89,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
 
 
 document.getElementById('next').addEventListener('click',()=>{
-    if(songIndex>=9){
+    if(songIndex>= songs.length - 1){
         songIndex=0;
     }
     else{
