@@ -119,10 +119,10 @@ nav ul li{
   
 }
 
-.songItemsContainer{
+/* .songItemsContainer{
   margin-top: 50px;
   width: 20%;
-}
+} */
 
 .songInfo{
   position:absolute;
@@ -169,9 +169,9 @@ nav ul li{
     font-size: 0.9rem;
   }
   
-  .songItems {
+  /* .songItems {
     font-size: 0.9rem;
-  }
+  } */
 
   .bottom{
     margin: 0px;
@@ -186,9 +186,9 @@ nav ul li{
     font-size: 0.8rem;
   }
   
-  .songItems {
+  /* .songItems {
     min-width: 250px;
-  }
+  } */
   
   #masterSongName {
     font-size: 0.8rem;
@@ -206,148 +206,57 @@ nav ul li{
   }
 }
 
-
-/* changes */
-
-
-
-
-@media (max-width: 768px) {
-  nav ul {
-    justify-content: space-between;
-    padding: 0 10px;
-  }
-
-  .brand {
-    font-size: 1rem;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-  }
-
-  .songItems {
-    width: 100%;
-  }
-
-  .bottom {
-    height: 80px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-  }
-
-  .songInfo {
-    position: static;
-    text-align: center;
-    width: 100%;
-  }
-
-  #myProgressBar {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0 5px;
-  }}
-
-  .brand {
-    font-size: 0.9rem;
-  }
-
-  .container {
-    width: 95%;
-    padding: 10px;
-  }
-
-  .songItems {
-    font-size: 0.8rem;
-  }
-
-  .bottom {
-    height: 70px;
-  }
-
-  .icons i {
-    font-size: 1.5rem;
-  }
-
-  #masterSongName {
-    display: none; 
-
-  .songInfo img {
-    width: 40px;
-    height: 15px;
-  }
-}
-
-@media (max-width: 400px) {
-  .brand {
-    font-size: 0.8rem;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .icons i {
-    font-size: 1.2rem;
-  }
-
-  .bottom {
-    height: 60px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #myProgressBar {
-    width: 85%;
-  }
+.songItemPlay{
+  cursor: pointer;
 }
 
 
-/* 2nd change */
+.songDuration{
+  display: flex;
+  position: sticky;
+  right: 0;
+}
 
 
+/* change */
 
 
 .songItems {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Push elements apart */
+  justify-content: space-between; /* Ensures elements are spaced out */
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  background: #121212;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.songItems img {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.songName {
-  flex-grow: 1; /* Pushes duration and play button to the right */
+.songItems .songName {
+  flex-grow: 1;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.songDuration {
-  margin-right: 10px; /* Adds spacing before the play button */
+.songItems .songDuration {
   font-size: 14px;
-  color: #777;
+  color: #bbb;
+  margin-left: 10px;  
+  display: inline-block;
+  text-align: right;  
 }
 
-.songItemPlay {
+.songItems .songItemPlay {
   font-size: 20px;
   cursor: pointer;
-  color: #1DB954; /* Spotify green */
+  color: white;
+  display: inline-block;
 }
 
+
+.songItems:hover {
+  background: #1db954;
+  color: black;
+}
