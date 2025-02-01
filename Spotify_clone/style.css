@@ -260,3 +260,10 @@ nav ul li{
   background: #1db954;
   color: black;
 }
+
+
+@media (max-width: 768px) {
+  #masterSongName {
+      display: none; /* Hide the song name on mobile */
+  }
+}
