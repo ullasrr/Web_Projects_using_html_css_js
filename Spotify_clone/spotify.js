@@ -229,3 +229,67 @@ audioElement.addEventListener('ended', () => {
 //     let sec = Math.floor(seconds % 60);
 //     return `${min}:${sec < 10 ? "0" : ""}${sec}`;
 // }
+
+//2nd
+// songItems.forEach((element, i) => {
+//     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+//     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+
+//     // Create a temporary audio element to fetch duration
+//     let audio = new Audio(songs[i].filePath);
+//     audio.addEventListener("loadedmetadata", () => {
+//         let duration = formatTime(audio.duration);
+//         let durationElement = element.getElementsByClassName("songDuration")[0];
+
+//         // Update the duration without affecting other elements
+//         if (durationElement) {
+//             durationElement.innerText = duration;
+//         }
+//     });
+// });
+
+// // Helper function to format time (e.g., 125 sec → 2:05)
+// function formatTime(seconds) {
+//     let min = Math.floor(seconds / 60);
+//     let sec = Math.floor(seconds % 60);
+//     return `${min}:${sec < 10 ? "0" : ""}${sec}`;
+// }
+
+
+//3rd code
+
+// Function to load and display song durations
+function loadSongDurations() {
+    songItems.forEach((element, i) => {
+        let audio = new Audio(songs[i].filePath);
+        let durationElement = element.getElementsByClassName("songDuration")[0];
+
+        // Debugging: Check if the element exists
+        if (!durationElement) {
+            console.warn(`Duration element not found for song index ${i}`);
+            return;
+        }
+
+        // Wait for metadata to load, then update duration
+        audio.addEventListener("loadedmetadata", () => {
+            let duration = formatTime(audio.duration);
+            console.log(`Loaded duration for ${songs[i].songName}: ${duration}`); // Debugging
+            durationElement.innerText = duration;
+        });
+
+        // Error handling for loading issues
+        audio.addEventListener("error", () => {
+            console.error(`Error loading ${songs[i].filePath}`);
+        });
+    });
+}
+
+// Function to format time (e.g., 125 sec → 2:05)
+function formatTime(seconds) {
+    let min = Math.floor(seconds / 60);
+    let sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? "0" : ""}${sec}`;
+}
+
+// Call function after DOM is loaded
+document.addEventListener("DOMContentLoaded", loadSongDurations);

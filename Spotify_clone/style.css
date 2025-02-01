@@ -121,6 +121,7 @@ nav ul li{
 
 .songItemsContainer{
   margin-top: 50px;
+  width: 20%;
 }
 
 .songInfo{
@@ -317,4 +318,36 @@ nav ul li{
 
 
 
+
+.songItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push elements apart */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.songItems img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.songName {
+  flex-grow: 1; /* Pushes duration and play button to the right */
+  font-size: 16px;
+}
+
+.songDuration {
+  margin-right: 10px; /* Adds spacing before the play button */
+  font-size: 14px;
+  color: #777;
+}
+
+.songItemPlay {
+  font-size: 20px;
+  cursor: pointer;
+  color: #1DB954; /* Spotify green */
+}
 
