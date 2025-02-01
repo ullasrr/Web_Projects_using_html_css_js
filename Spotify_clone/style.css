@@ -270,6 +270,7 @@ nav ul li{
 
 /* new */
 
+
 #masterSongName {
   font-size: 24px ;
   color: #FF6347;
@@ -292,4 +293,10 @@ nav ul li{
       font-size: 24px; /* Larger text for better visibility */
       color: #FF6347;
   }
+}
+
+
+#masterSongName{
+  font-size: 15px ;
+  background-color: green;
 }
